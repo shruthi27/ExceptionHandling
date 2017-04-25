@@ -1,0 +1,44 @@
+
+
+public class ExceptionHandling 
+{
+	public static void main(String args[])
+	{  
+	      try
+	      {  
+	      validate(13);  
+	      }
+	      catch(Exception m)
+	      {
+	    	  System.out.println("Exception occured: "+m);
+	      }  
+	  
+	      System.out.println("rest of the code...");  
+	  }
+
+	private static void validate(int i) 
+	{
+		// TODO Auto-generated method stub
+		
+	}  
+}
+class NegativeAgeException extends Exception
+{  
+	 NegativeAgeException(String s)
+	 {  
+	  super(s);  
+	 }  
+	}  
+	class TestCustomException1{  
+	  
+	   static void validate(int age)throws NegativeAgeException{  
+	     if(age<18)  
+	      throw new NegativeAgeException("not valid");  
+	     else  
+	      System.out.println("welcome to vote");  
+	   }  
+	}
+	
+//Output:
+
+rest of the code...
